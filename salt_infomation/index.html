@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>
+		</title>
+		
+		<script src="jquery-3.4.1.min.js">
+		</script>
+		
+		<link rel="stylesheet" href="jquery.dataTables.min.css">
+		<script src="jquery.dataTables.min.js">
+		</script>
+		
+		<script src="jquery.highlight.js"> </script>
+				
+		<style>
+			.highlight {
+				background-color: skyblue5
+			}
+		</style>
+	</head>
+	<body>
+		<table id="table" class="display">
+		<thead>
+			<tr>
+				<th>Classification</th>
+				<th>Chr</th>
+				<th>Symbol</th>
+				<th>Description</th>
+				<th>RAP_ID</th>
+				<th>RAP_Pos</th>
+				<th>MSU_ID</th>
+				<th>MSU_Pos</th>
+				<th>Uniprot_ID</th>
+				<th>NCBI_ID</th>
+				<th>Donor</th>
+				<th>Ref</th>
+				<th>Information</th>
+				<th>Expression</th>
+				<th>Effect</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+		<table>
+		
+			<script src="salt_info.xlsx.js"></script>
+			
+			<script>
+				$(document).ready(function(){
+					var table=$('#table').DataTable({
+						data:data,
+						columns:[
+						{data:'Classification'},
+						{data:'Chr'},
+						{data:'Symbol'},
+						{data:'Description'},
+						{data:'RAP_ID'},
+						{data:'RAP_Pos'},
+						{data:'MSU_ID'},
+						{data:'MSU_Pos'},
+						{data:'Uniprot_ID'},
+						{data:'NCBI_ID'},
+						{data:'Donor'},
+						{data:'Ref'},
+						{data:'Information'},
+						{data:'Expression'},
+						{data:'Effect'}
+						]
+					})
+				});
+			</script>
+	</body>
+</html>
